@@ -12,53 +12,16 @@ export const convertOpenApiJsonToArray = (jsonData: OpenApi): ConvertedItems => 
       if (!methodItem) return
 
       result.push({
-        openapi: jsonData.openapi,
         path: path,
-        summary: pathItem.summary || '',
-        description: pathItem.description || '',
+        summary: methodItem.summary || '',
+        description: (methodItem.description || '').substring(0, 200),
         method: method,
         tags: methodItem.tags ? methodItem.tags.join(' ') : '',
-        summaryMethod: methodItem.summary || '',
-        descriptionMethod: methodItem.description || '',
         operationId: methodItem.operationId || '',
+        catalogueId: (methodItem as any)['x-catalogue-id'] || ''
       })
     })
   }
-  return result
-}
-
-export const convertOpenApiCsvToJson = (csvData: ConvertedItems): OpenApi => {
-  const result = csvData.reduce((prev: OpenApi, current: ConvertedItem): OpenApi => {
-    const path = current?.path
-    if (!path) return prev
-
-    if (!prev.openapi) {
-      prev.openapi = current.openapi
-    }
-
-    if (!prev.paths?.[path]) {
-      prev.paths = {
-        ...prev.paths,
-        [path]: {
-          summary: current.summary,
-          description: current.description,
-        },
-      }
-    }
-
-    prev.paths[path] = {
-      ...prev.paths[path],
-      [current.method]: {
-        tags: current.tags.split(' '),
-        summary: current.summaryMethod,
-        description: current.descriptionMethod,
-        operationId: current.operationId,
-      },
-    }
-
-    return prev
-  }, {} as OpenApi)
-
   return result
 }
 
@@ -98,6 +61,7 @@ export const updateApiDoc = (
         summaryMethod: methodItem.summary || '',
         descriptionMethod: methodItem.description || '',
         operationId: methodItem.operationId || '',
+        catalogueId: (methodItem as any)['x-catalogue-id'] || ''
       }
       if (index >= 0) {
         updatedDoc[index] = {

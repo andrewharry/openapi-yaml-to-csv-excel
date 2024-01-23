@@ -1,5 +1,5 @@
 export const isValidInputFile = (filePath: string): boolean => {
-  const regex = /\.(yml|yaml)$/
+  const regex = /\.(yml|yaml|json)$/
   return regex.test(filePath)
 }
 

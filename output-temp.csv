@@ -1,0 +1,16 @@
+﻿tags,catalogueId,summary,path,method
+Accounts,API_PHI_STK_003,Get Stakeholder Accounts,/api/stakeholder/accounts/v1,get
+Contact Details,API_PHI_STK_004,Get Contact Details,/api/stakeholder/contact-details/v1,get
+Individuals,API_PHI_STK_008,Get Individual Associations,/api/stakeholder/individuals/associations/v1/list,get
+Individuals,API_PHI_STK_017,Get Individual Birth Date Change Impacts,/api/stakeholder/individuals/birth-date-impacts/v1,get
+Individuals,API_PHI_STK_010,Get Individual Cards,/api/stakeholder/individuals/cards/v1/list,get
+Individuals,API_PHI_STK_009,Get Individual Eligibility Reasons,/api/stakeholder/individuals/eligibility-reasons/v1/list,get
+Individuals,API_PHI_STK_007,Get Individual,/api/stakeholder/individuals/v1,get
+Individuals,API_PHI_STK_018,Patch Individual,/api/stakeholder/individuals/v1,patch
+Individuals,API_PHI_STK_011,Get Individual Preexisting Conditions,/api/stakeholder/individuals/preexisting-conditions/v1/list,get
+Individuals,API_PHI_STK_012,Get Individual Previous Covers,/api/stakeholder/individuals/previous-covers/v1/list,get
+Individuals,API_PHI_STK_013,Get Individual Student Declarations,/api/stakeholder/individuals/student-declarations/v1/list,get
+Leads,API_PHI_STK_014,Add Lead,/api/stakeholder/leads/v1,post
+Leads,API_PHI_STK_016,Cancel Lead,/api/stakeholder/leads/v1/cancel,post
+Leads,API_PHI_STK_015,Reopen Lead,/api/stakeholder/leads/v1/reopen,post
+Search,API_PHI_STK_001,Search Stakeholders,/api/stakeholder/search/v1,get

@@ -10,15 +10,11 @@ export const methods = [
 ] as const
 
 export const headers = [
-  'openapi',
-  'path',
-  'summary',
-  'description',
-  'method',
   'tags',
-  'summaryMethod',
-  'descriptionMethod',
-  'operationId',
+  'catalogueId',
+  'summary',
+  'path',  
+  'method'
 ] as const
 
 export const FileType = {

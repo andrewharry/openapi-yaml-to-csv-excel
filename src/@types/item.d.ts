@@ -4,15 +4,13 @@ export type ConvertedItems = ConvertedItem[]
 export type ConvertedItemsEdited = ConvertedItemEdited[]
 
 type ConvertedItem = {
-  openapi: string
   path: string
   summary: string
   description: string
   method: Method
   tags: string
-  summaryMethod: string
-  descriptionMethod: string
   operationId: string
+  catalogueId?: string
 }
 
 type ConvertedItemEdited = ConvertedItem & { [key: string]: string }
