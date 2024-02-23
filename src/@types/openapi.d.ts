@@ -2,7 +2,12 @@ import type { methods } from '@/constants'
 
 export type OpenApi = {
   openapi: string
+  info: InfoObject
   paths?: PathObject
+}
+
+type InfoObject = {
+  title: string
 }
 
 type PathObject = {

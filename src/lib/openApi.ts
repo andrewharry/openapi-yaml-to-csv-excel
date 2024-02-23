@@ -12,10 +12,11 @@ export const convertOpenApiJsonToArray = (jsonData: OpenApi): ConvertedItems => 
       if (!methodItem) return
 
       result.push({
+        title: jsonData.info.title,
         path: path,
         summary: methodItem.summary || '',
         description: (methodItem.description || '').substring(0, 200),
-        method: method,
+        method: method.toUpperCase(),
         tags: methodItem.tags ? methodItem.tags.join(' ') : '',
         operationId: methodItem.operationId || '',
         catalogueId: (methodItem as any)['x-catalogue-id'] || ''
@@ -53,10 +54,11 @@ export const updateApiDoc = (
       const index = updatedDoc.findIndex((doc) => doc.operationId === methodItem.operationId)
       const newCsvItem = {
         openapi: newDoc.openapi,
+        title: newDoc.info.title,
         path: path,
         summary: pathItem.summary || '',
         description: pathItem.description || '',
-        method: method,
+        method: method.toUpperCase(),
         tags: methodItem.tags ? methodItem.tags.join(' ') : '',
         summaryMethod: methodItem.summary || '',
         descriptionMethod: methodItem.description || '',

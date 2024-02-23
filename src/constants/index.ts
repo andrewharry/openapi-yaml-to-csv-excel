@@ -10,6 +10,7 @@ export const methods = [
 ] as const
 
 export const headers = [
+  'title',
   'tags',
   'catalogueId',
   'summary',

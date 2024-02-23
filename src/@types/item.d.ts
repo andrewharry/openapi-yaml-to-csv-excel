@@ -4,10 +4,11 @@ export type ConvertedItems = ConvertedItem[]
 export type ConvertedItemsEdited = ConvertedItemEdited[]
 
 type ConvertedItem = {
+  title: string
   path: string
   summary: string
   description: string
-  method: Method
+  method: string
   tags: string
   operationId: string
   catalogueId?: string
