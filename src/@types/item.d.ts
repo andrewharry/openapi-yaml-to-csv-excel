@@ -12,6 +12,7 @@ type ConvertedItem = {
   tags: string
   operationId: string
   catalogueId?: string
+  buildStatus?: string
 }
 
 type ConvertedItemEdited = ConvertedItem & { [key: string]: string }

@@ -13,6 +13,7 @@ export const headers = [
   'title',
   'tags',
   'catalogueId',
+  'buildStatus',
   'summary',
   'path',  
   'method'

@@ -19,7 +19,8 @@ export const convertOpenApiJsonToArray = (jsonData: OpenApi): ConvertedItems => 
         method: method.toUpperCase(),
         tags: methodItem.tags ? methodItem.tags.join(' ') : '',
         operationId: methodItem.operationId || '',
-        catalogueId: (methodItem as any)['x-catalogue-id'] || ''
+        catalogueId: (methodItem as any)['x-catalogue-id'] || '',
+        buildStatus: (methodItem as any)['x-build-status'] || ''
       })
     })
   }
@@ -63,7 +64,8 @@ export const updateApiDoc = (
         summaryMethod: methodItem.summary || '',
         descriptionMethod: methodItem.description || '',
         operationId: methodItem.operationId || '',
-        catalogueId: (methodItem as any)['x-catalogue-id'] || ''
+        catalogueId: (methodItem as any)['x-catalogue-id'] || '',
+        buildStatus: (methodItem as any)['x-build-status'] || ''
       }
       if (index >= 0) {
         updatedDoc[index] = {
