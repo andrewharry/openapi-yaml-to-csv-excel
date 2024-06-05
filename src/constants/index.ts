@@ -12,6 +12,7 @@ export const methods = [
 export const headers = [
   'title',
   'tags',
+  'version',
   'catalogueId',
   'buildStatus',
   'summary',

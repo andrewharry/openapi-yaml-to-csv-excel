@@ -64,6 +64,7 @@ export const updateApiDoc = (
         summaryMethod: methodItem.summary || '',
         descriptionMethod: methodItem.description || '',
         operationId: methodItem.operationId || '',
+        version: (methodItem as any)['x-api-version'] || '',
         catalogueId: (methodItem as any)['x-catalogue-id'] || '',
         buildStatus: (methodItem as any)['x-build-status'] || ''
       }

@@ -11,6 +11,7 @@ type ConvertedItem = {
   method: string
   tags: string
   operationId: string
+  version?: string
   catalogueId?: string
   buildStatus?: string
 }
