@@ -19,6 +19,7 @@ export const convertOpenApiJsonToArray = (jsonData: OpenApi): ConvertedItems => 
         method: method.toUpperCase(),
         tags: methodItem.tags ? methodItem.tags.join(' ') : '',
         operationId: methodItem.operationId || '',
+        version: (methodItem as any)['x-api-version'] || '',
         catalogueId: (methodItem as any)['x-catalogue-id'] || '',
         buildStatus: (methodItem as any)['x-build-status'] || ''
       })
