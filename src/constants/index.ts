@@ -10,14 +10,15 @@ export const methods = [
 ] as const
 
 export const headers = [
+  'catalogueId',
   'title',
   'tags',
-  'version',
-  'catalogueId',
-  'buildStatus',
   'summary',
-  'path',  
-  'method'
+  'path', 
+  'method',
+  'version',
+  'build',
+  'obsolete'
 ] as const
 
 export const FileType = {

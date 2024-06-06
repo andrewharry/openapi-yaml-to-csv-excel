@@ -13,7 +13,8 @@ type ConvertedItem = {
   operationId: string
   version?: string
   catalogueId?: string
-  buildStatus?: string
+  build?: string
+  obsolete?: string
 }
 
 type ConvertedItemEdited = ConvertedItem & { [key: string]: string }

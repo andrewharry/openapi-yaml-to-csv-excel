@@ -21,7 +21,8 @@ export const convertOpenApiJsonToArray = (jsonData: OpenApi): ConvertedItems => 
         operationId: methodItem.operationId || '',
         version: (methodItem as any)['x-api-version'] || '',
         catalogueId: (methodItem as any)['x-catalogue-id'] || '',
-        buildStatus: (methodItem as any)['x-build-status'] || ''
+        build: (methodItem as any)['x-build-status'] || '',
+        obsolete: ((methodItem as any)['x-api-obsolete'] || '').toLowerCase()
       })
     })
   }
