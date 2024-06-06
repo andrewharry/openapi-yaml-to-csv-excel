@@ -14,7 +14,7 @@ type ConvertedItem = {
   version?: string
   catalogueId?: string
   build?: string
-  obsolete?: string
+  deprecated?: string
 }
 
 type ConvertedItemEdited = ConvertedItem & { [key: string]: string }

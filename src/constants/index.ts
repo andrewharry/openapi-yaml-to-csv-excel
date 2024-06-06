@@ -18,7 +18,7 @@ export const headers = [
   'method',
   'version',
   'build',
-  'obsolete'
+  'deprecated'
 ] as const
 
 export const FileType = {

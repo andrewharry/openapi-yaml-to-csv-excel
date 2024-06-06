@@ -22,7 +22,7 @@ export const convertOpenApiJsonToArray = (jsonData: OpenApi): ConvertedItems => 
         version: (methodItem as any)['x-api-version'] || '',
         catalogueId: (methodItem as any)['x-catalogue-id'] || '',
         build: (methodItem as any)['x-build-status'] || '',
-        obsolete: ((methodItem as any)['x-api-obsolete'] || '').toLowerCase()
+        deprecated: ((methodItem as any)['x-api-deprecated'] || '').toLowerCase()
       })
     })
   }
